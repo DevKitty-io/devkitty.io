@@ -20,4 +20,4 @@ We host frequent workshops at LA hackerspaces, and also pop up at conferences ar
 To run a workshop at your venue, contact Alex at `alex@lyndlabs.io`.
 
 #### Support 
-For product support, reach out on our Discord Channel or contact `support@lyndlabs.io`.
+For product support, reach out on our [Discord Channel](https://discord.devkitty.io) or contact `support@lyndlabs.io`.

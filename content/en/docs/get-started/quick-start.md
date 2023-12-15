@@ -15,7 +15,7 @@ toc: true
 ## Help
 If you’re having software or hardware problems with the DevKitty, please open an issue on the appropriate [GitHub](http://github.com/DevKitty.io) repository.
 
-For general support, join our [Discord Channel]().
+For general support, join our [Discord Channel](https://discord.devkitty.io).
 
 ## Social Media
  - [Instagram](https://instagram.com/DevKitty.io)
