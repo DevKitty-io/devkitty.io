@@ -1,0 +1,151 @@
+{{ define "main" }}
+<script src="https://kit.fontawesome.com/ac0bb12408.js" crossorigin="anonymous"></script>
+
+
+<img />
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+
+    <div class="col-lg-12 text-center mx-5">
+      <img src="DevKitty-Outline.svg" style="width: 400px; margin:2px;">
+    </div>
+
+    <div class="col-lg-12 text-center">
+      <!-- <h1 class="mt-0">{{ .Title }}</h1> -->
+      <h4>{{ .Params.lead | safeHTML }}</h4>
+    </div>
+
+
+    <div class="col-lg-9 col-xl-8 mt-3 text-center">
+      <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="/docs/get-started/introduction/" role="button">Learn More</a>
+      <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="https://shop.devkitty.io" role="button">{{ i18n "buy-now" }}
+        →</a>
+      <!-- <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p> -->
+    </div>
+  </div>
+
+  <!-- <div>
+    <button type="button" class="btn btn-outline-light p-3 rounded-circle btn-lg" style="height: 50px; width: 50px"><i class="fa-brands fa-twitter"></i></button>
+    <button type="button" class="btn btn-info p-2 rounded-circle btn-lg">10000</button>
+  </div> -->
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+{{ if eq $.Site.Language.LanguageName "English" }}
+
+<section class="section section-sm">
+  <div class="container">
+    <hr>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-5">
+        <h2 class="h4"><i class="fa-solid fa-chalkboard-user"></i> Learn</h2>
+        <p>We create open-source hardware and free content to make hacking & hardware more accessible to everyone.</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4"><i class="fa-solid fa-laptop"></i> Hack</h2>
+        <p>DevKitty is ready to explore the wireless landscape, and audit computers around you. And you'll learn as you
+          hack!</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4"><i class="fa-solid fa-microchip"></i> Prototype</h2>
+        <p>Our plug-and-play hardware & software libraries makes it easy to build your next project - or mini hacking
+          rig.</p>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+</section>
+  <div class="container col-md-6">
+    <!-- <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1"><h3>Get notified of cool stuff <i class="fa-solid fa-arrow-down"></i></h3></label>
+        <div class="input-group">
+          <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-outline-light" style="border-radius: 0 0.25rem 0.25rem 0;">Submit</button>
+          </span>
+        </div>
+      </div>
+    </form> -->
+    <!-- <div id="mc_embed_shell">
+
+      <div id="mc_embed_signup"> -->
+
+        
+
+        <!-- <form
+          action="https://lyndlabs.us21.list-manage.com/subscribe/post?u=8e946a0025e305afad3dd3ccc&amp;id=f02dff107c&amp;f_id=004ae5e6f0"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+          target="_self" novalidate="">
+
+          <div id="mc_embed_signup_scroll">
+            <h2>Get notified of cool stuff <i class="fa-solid fa-arrow-down"></i></h2>
+            <div class="indicates-required"><span class="asterisk">*</span> <i>indicates required</i></div>
+            
+            <div class="form-group">
+              <label for="mce-EMAIL">Email Address <span
+                  class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
+                id="mce-EMAIL" required="" value=""></span>
+            </div>
+
+            <div class="mc-field-group"><label for="mce-FNAME">First Name </label><input type="text" name="FNAME"
+                class=" text" id="mce-FNAME" value=""></div>
+
+            <div class="mc-field-group"><label for="mce-PHONE">Phone Number </label><input type="text" name="PHONE"
+                class="REQ_CSS" id="mce-PHONE" value=""></div>
+
+            <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display: none;"></div>
+              <div class="response" id="mce-success-response" style="display: none;"></div>
+            </div>
+
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              /* real people should not fill this in and expect good things - do not remove this or risk form bot
+              signups */
+              <input type="text" name="b_8e946a0025e305afad3dd3ccc_f02dff107c" tabindex="-1" value="">
+            </div>
+            <div class="optionalParent">
+              <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+              </div>
+            </div>
+          </div> 
+        </form> -->
+
+      <!-- </div>
+    </div> -->
+
+  </div>
+
+  <!-- <div class="justify-content-center text-center">
+
+  </div> -->
+  <!-- <div class="justify-content-center">
+    <div class="col text-center">
+      <a class="btn btn-primary btn-lg px-4 mb-2"
+        href="youtube.com/hak5"
+        role="button">Check out our videos</a>
+      <a class="btn btn-primary btn-lg px-4 mb-2"
+        href="https://discord.gg/D2j4MHYQ38"
+        role="button">Join us on Discord!</a>
+      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>
+    </div>
+  </div> -->
+
+
+</section>
+{{ end }}
+{{ end }}
+
+{{ define "sidebar-footer" }}
+<section class="section section-sm container-fluid">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-9">
+      {{- .Content -}}
+    </div>
+  </div>
+</section>
+{{ end }}
