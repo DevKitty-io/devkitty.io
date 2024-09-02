@@ -1,5 +1,5 @@
 ---
-title: "WiFi Interface"
+title: "Remote Attacks"
 description: "Deploy remote attacks with the ScriptKitty firmware"
 lead: "Deploy remote USB attacks on your DevKitty."
 date: 2020-10-13T15:21:01+02:00
@@ -23,7 +23,7 @@ The ScriptKitty Firmware has a WiFi interface that enables remote access for wir
 By default, the ScriptKitty firmware uses the following credentials.  Just join the access point from your phone or laptop!
 
 ```
-Network: ScriptKitty
+Network: DevKitty
 Password: 12345678
 ```
 Next, navigate to `192.168.4.1` in a web browser.  This brings you to the ScriptKitty attack interface.
@@ -32,6 +32,6 @@ Next, navigate to `192.168.4.1` in a web browser.  This brings you to the Script
 `docs coming soon`
 
 ## Settings
-To modify the WiFi credentials, open the `scriptkitty.conf` file on the flash drive, and change the `network` & `password` parameters.  You'll need to restart after this.
+To modify the WiFi credentials, open the `config.txt` file on the flash drive, and change the `network` & `password` parameters.  You'll need to restart after this.
 
 *The ability to change settings from the web interface is coming soon!*

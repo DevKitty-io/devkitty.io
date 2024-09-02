@@ -1,5 +1,5 @@
 ---
-title: "Live Control"
+title: "Live Control API"
 description: "Run Commands live"
 lead: "Live Command Execution API"
 date: 2020-10-13T15:21:01+02:00

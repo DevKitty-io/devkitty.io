@@ -11,15 +11,16 @@ menu:
 weight: 110
 toc: true
 ---
+For general support, contact `support@devkitty.io`.  
+For inquiries, contact `inquiries@devkitty.io`.
+## 👥 Community
+[Join our Discord]() to share what you're building with the DevKitty community!  We'd also love to hear from you on [Instagram]() & [Twitter]().
 
-## Help
+<!-- ## 🫂 Support
+For collaborations or inquiries, contact `support@devkitty.io`. -->
+
+## 🪲 Support
 If you’re having software or hardware problems with the DevKitty, please open an issue on the appropriate [GitHub](http://github.com/DevKitty.io) repository.
 
 For general support, join our [Discord Channel](https://discord.devkitty.io).
 
-## Social Media
- - [Instagram](https://instagram.com/DevKitty.io)
- - [X (Twitter)](https://twitter.com/DevKitty_io)
-
-## Contact Us
-For collaborations or other inquiries, contact Alex at `support@lyndlabs.io`

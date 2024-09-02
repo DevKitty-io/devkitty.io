@@ -4,7 +4,7 @@ description: "Quick CircuitPython USB Attack Demos in CircuitPython"
 lead: "Quick CircuitPython USB Attack Demos in CircuitPython"
 date: 2022-08-27T08:48:57+00:00
 lastmod: 2022-08-27T08:48:57+00:00
-draft: false
+draft: true
 images: []
 menu:
   docs:

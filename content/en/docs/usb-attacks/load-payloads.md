@@ -1,7 +1,7 @@
 ---
-title: "Loading Payloads on the DevKitty"
-description: "Adding payloads via the USB and web interface"
-lead: "Adding payloads via the USB and web interface"
+title: "Config"
+description: "How to configure WiFi & USB Settings on ScriptKitty"
+lead: "Configure ScriptKitty Settings"
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
@@ -9,9 +9,39 @@ images: []
 menu:
   docs:
     parent: "guides"
-weight: 130
+weight: 30
 toc: true
 ---
+To edit the default WiFi network on ScriptKitty, or change the default USB device identifiers on ScriptKitty, you can simply edit the `config.txt` file on the flash drive!  To reload the settings, simply restart your CutieCat!
+
+## Settings
+|Parameter|Description|Value|
+|---|---|---|
+|`network`|WiFi AP SSID|anything without spaces|
+|`password`|WiFi AP Password|must be 8 or more characters|
+|`vid`|USB Vendor ID|Hex value like `0x00`|
+|`pid`|USB Product ID|Hex value like `0x00`|
+
+## Emulate USB Devices
+By default, the ScriptKitty Firmware emulates an Apple Keyboard to bypass MacOS flagging non-Apple keyboards.  
+
+You can easily modify the type of device it emulates by editing the `config.txt` file on the flash drive!  All you have to do is edit the `VID` and `PID` parameter - which correspond to **Vendor ID** and **Product ID** respectively.  
+
+You can use a USB vendor lookup tool like this [open database](http://www.linux-usb.org/usb.ids) to choose a device to emulate.
+
+On Linux / Mac you can check if this worked using:
+```
+lsusb
+```
+
+On Windows, check your Device Manager!
+
+<!-- More docs coming soon. -->
+
+
+
+<!-- ---
+--
 The DevKitty supports adding payloads both through the web interface and directly over USB. 
 
 To start, let's write a simple DuckyScript Payload and save it over USB.
@@ -49,7 +79,7 @@ Inside each folder, you can add up to 3 sub-folders to organize your payloads by
 
 We'll drop our payload in a "Test" folder under the "Mac" operating system folder. The file structure will look like this:
 
-DevKitty Drive --> Mac Folder --> Test Folder --> Payload.TXT
+
 
 Once we drop our file onto the DevKitty, we can see it by pressing the left button for the Mac folder, then selecting the "Test" folder.
 
@@ -75,4 +105,4 @@ You can watch each command execute on the built-in screen while the payload runs
 <img src="/images/load_scriptkitty_4.png" title="DevKitty Image"/>
 <br /><br />
 
-That's it! We've created a test payload and run it on the DevKitty using the USB interface.
+That's it! We've created a test payload and run it on the DevKitty using the USB interface. -->
