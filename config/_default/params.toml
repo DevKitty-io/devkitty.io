@@ -3,8 +3,8 @@
 ## Homepage
 title = "DevKitty"
 titleSeparator = "-"
-titleAddition = "Cat-Themed Hacking & Prototyping in your Pocket!"
-description = "Cat-Themed Hacking & Prototyping in your Pocket!"
+titleAddition = "Cat-Themed Tools for Hackers & Makers!"
+description = "Cat-Themed Tools for Hackers & Makers!"
 
 ## Documentation
 # docsVersion = "0.1"
@@ -15,7 +15,7 @@ twitterCreator = "@henkverlinde"
 
 ## JSON-LD
 schemaType = "Organization"
-schemaName = "HakCat Tech"
+schemaName = "DevKitty"
 schemaAuthorTwitter = "https://twitter.com/devkitty_io"
 schemaAuthorGitHub = "https://github.com/DevKitty-io"
 schemaLocale = "en-US"
@@ -55,10 +55,10 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "© 2023 DevKitty"
+footer = "© 2024 DevKitty"
 
 # Feed
-copyRight = "Copyright (c) 2023 DevKitty"
+copyRight = "Copyright (c) 2024 DevKitty"
 
 # Alert
 alert = false

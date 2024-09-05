@@ -38,7 +38,32 @@ For more tips, check out our soldering guide. -->
 ## 🗒 Steps
 
 ### 1. Place the ESP32
-![](/images/update.JPG)
+<div id="Step-1" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-1.1.png" class="d-block w-100" alt="">
+      <div class="carousel-caption d-none d-md-block">
+          <p>a. Melt a tack of solder onto the top right pad.</p>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-1.2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+          <p>b. Reheat the blob and place the microcontroller!</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#Step-1" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#Step-1" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</br>
+
 - Start by melting a small "tack" of solder to one of the CutieCat microcontroller pads.  This will help us place the ESP32 before committing.
 - Center the ESP32 on the microcontroller footprint.  
 - Reheat the tack of solder until it melts, while pressing down the ESP32.  Don't worry about how the first joint looks!
@@ -46,7 +71,31 @@ For more tips, check out our soldering guide. -->
 
 ### 2. Solder the ESP32
 {{< alert icon="⚠️" context="danger" text="Be extra careful not to burn the switch connector, or bridge neighboring pins." />}}
-![](/images/update.JPG)
+<div id="Step-2" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-2.1.png" class="d-block w-100" alt="">
+      <!-- <div class="carousel-caption d-none d-md-block">
+          <p>a</p>
+      </div> -->
+    </div>
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-2.2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+          <p>Solder the rest of the pins!</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#Step-2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#Step-2" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</br>
 
 - a. Solder each remaining pad on the microcontroller!
 - b. Ensure the connection is solid by bridging the ESP32 pad & PCB pads
@@ -55,7 +104,25 @@ For more tips, check out our soldering guide. -->
 **Switch connector will be moved in update v0.1 design*
 
 ### 3. Solder the Expansion Header
-![](/images/update.JPG)
+<div id="Step-3" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-3.1.png" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-3.2.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#Step-3" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#Step-3" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</br>
 
 - a. Insert the 6-Pin Header on the Side
 - b. Lay the board & header flush on a flat surface
@@ -64,16 +131,58 @@ For more tips, check out our soldering guide. -->
 
 ### 4. Prep + Solder the Screen
 {{< alert icon="⚠️" context="warning" text="Press down on center of screen - the edges are really fragile!" />}}
-![](/images/update.JPG)
+<div id="Step-4" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-4.1.png" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-4.2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-4.3.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#Step-4" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#Step-4" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</br>
 
-- a. Add double-sided foam tape at the bottom of the screen footprint.
+- a. Add double-sided foam tape at the bottom of the screen footprint (not pictured)
 - b. Center & press the screen in place.
 - c. Solder the screen joints on the back.
 <!-- note: correct screen askew -->
 
 ### 5. Antenna & Case Assembly
 {{< alert icon="🛈" context="warning" text="Read our long-range mod guide before adding the external antenna!!" />}}
-![](/images/update.JPG)
+<div id="Step-5" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-5.1.png" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-5.2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item active">
+      <img src="/images/CutieCat/Soldering-Guide/Step-5.3.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#Step-5" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#Step-5" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</br>
  
 - a. Snap the patch antenna onto the ESP32 u.fl connector
 - b. Insert the D-Pad into the Top Enclosure
