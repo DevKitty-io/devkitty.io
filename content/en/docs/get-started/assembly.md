@@ -13,7 +13,7 @@ menu:
 weight: 10
 toc: true
 ---
-{{< alert icon="⚠️" context="warning" text="Updated pics & assembly video coming by Sep 06 2024." />}}
+{{< alert icon="⚠️" context="warning" text="Assembly video coming by Sep 10 2024." />}}
 
 <!-- #update# -->
 
