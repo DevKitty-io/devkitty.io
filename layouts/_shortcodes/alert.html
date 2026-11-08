@@ -1,0 +1,15 @@
+{{ $context := .Get "context" | default "info" }}
+<div class="callout callout-{{ $context }} not-prose" role="alert">
+  {{ with .Get "icon" }}<span class="callout-icon">{{ . }}</span>{{ end }}
+  <div class="callout-body">
+    {{ with .Get "text" }}
+      {{ . | markdownify }}
+    {{ else }}
+      {{ with .Inner }}
+        {{ . | markdownify }}
+      {{ else }}
+        {{ errorf "alert shortcode: no text or inner content in %s" $.Position }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

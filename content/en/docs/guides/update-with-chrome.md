@@ -6,9 +6,6 @@ date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: "guides"
 weight: 100
 toc: true
 ---
@@ -16,8 +13,8 @@ toc: true
 {{< alert icon="ℹ️" context="warning" text="WebSerial is an experimental feature that only works in Chrome-based browsers." />}}
 
 ### Step 1: Downloads
-* Download the [Chrome Browser]()
-* Download the latest [DevKitty Firmware](https://github.com/HakCat-Tech/USB-DevKitty/releases/download/v1.2.1-beta/USB-DevKitty.bin)
+* Download the Chrome Browser
+* Download the latest DevKitty Firmware
 
 ### Step 2: Place Your DevKitty in Flash Mode
 Next, you'll have to place your DevKitty into `DFU` (Device Firmware Upgrade) mode!  You can do this in 2 ways:

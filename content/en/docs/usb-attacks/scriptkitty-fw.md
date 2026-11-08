@@ -6,10 +6,6 @@ date: 2023-11-25T19:33:41-08:00
 lastmod: 2023-11-25T19:33:41-08:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: ""
-    identifier: "keystroke-injection-53a33d84e9d61112a5da19246b409d95"
 weight: 10
 toc: true
 ---
@@ -26,7 +22,7 @@ toc: true
 ##### Flash Drive
 The ScriptKitty Firmware creates a **flash drive** when plugged into your computer.  This makes it easy to drag and drop new payloads over - or exfiltrate files from a target device!
 
-This is where you can also modify the [configuration]() file.
+This is where you can also modify the configuration file.
 
 ##### Payload Organization
 You'll notice that payloads are organized by Operating System, and Sub-categories on the flash drive.  Since you don't know what types of systems you'll encounter in the wild, you can have hundreds ready to deploy at the press of a button!  
@@ -44,7 +40,7 @@ Try out the RickRoll payload for your target operating system.
 
 {{< alert icon="ℹ️" context="warning" text="Check out the dedicated sections for more info on writing payloads / ScriptKitty configuration." />}}
 ## Add New Payloads 
-Adding new payloads is as simple as dragging & dropping them over to the USB Drive!  Payload must end in `.txt` extension and are written in [DuckyScript]().  Check out our [payload guide]() to learn the syntax!
+Adding new payloads is as simple as dragging & dropping them over to the USB Drive!  Payload must end in `.txt` extension and are written in DuckyScript.  Check out our payload guide to learn the syntax!
 
 Thanks to Hak5, hundreds of payloads are already developed & ready to deploy.  Check out their repo for inspiration!  Only USB RubberDucky Payloads are compatible at the moment.
 

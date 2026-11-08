@@ -1,0 +1,38 @@
+{{ $current := . }}
+{{ with site.GetPage "/docs" }}
+  <nav class="docs-nav" aria-label="Docs navigation">
+    <ul>
+      {{ range .Sections.ByWeight }}
+        {{ $open := or (eq $current .) ($current.IsDescendant .) }}
+        <li class="mb-1">
+          <details class="docs-nav-group" {{ if $open }}open{{ end }}>
+            <summary class="docs-nav-heading">
+              <i class="fa-solid fa-chevron-right docs-nav-chevron"></i>
+              <span>{{ .Title }}</span>
+            </summary>
+            <ul class="docs-nav-list">
+              {{ range .Pages.ByWeight }}
+                {{ if .IsSection }}
+                  <li class="mt-2">
+                    <span class="docs-nav-subheading">{{ .Title }}</span>
+                    <ul>
+                      {{ range .Pages.ByWeight }}
+                        <li>
+                          <a class="docs-nav-link {{ if eq $current . }}active{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                        </li>
+                      {{ end }}
+                    </ul>
+                  </li>
+                {{ else }}
+                  <li>
+                    <a class="docs-nav-link {{ if eq $current . }}active{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                  </li>
+                {{ end }}
+              {{ end }}
+            </ul>
+          </details>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ end }}

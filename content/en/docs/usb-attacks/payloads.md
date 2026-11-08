@@ -6,9 +6,6 @@ date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: "guides"
 weight: 20
 toc: true
 ---
@@ -17,7 +14,7 @@ toc: true
 Our ScriptKitty Firmware supports DuckyScript™, making it easy to create your first payload! If you need inspiration, you can find a list of DuckyScrit payloads on the [Hak5 GitHub repository](https://github.com/hak5/usbrubberducky-payloads). 
 
 ## Payload Methodology
-When creating a keystroke injection payload, work backwards!  Start by thinking about what you want the payload to accomplish (a [RickRoll]() perhaps), and figure out what programs (web browser, terminal, etc.) have to be launched to achieve that end goal.
+When creating a keystroke injection payload, work backwards!  Start by thinking about what you want the payload to accomplish (a RickRoll perhaps), and figure out what programs (web browser, terminal, etc.) have to be launched to achieve that end goal.
 
 Then, try it out manually on your keyboard!  Make sure to write down the steps.  Next, let's break it down into actual DuckyScript!
 
@@ -29,7 +26,7 @@ Then, try it out manually on your keyboard!  Make sure to write down the steps. 
 - Keyboard Shortcuts & Modifier Keys can be used to navigate a GUI, switch browser tabs, and so much more!  Check it out:
   - [Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec)
   - [Mac](https://support.apple.com/en-us/102650)
-  - [Linux](https://www.javatpoint.com/linux-shortcuts)  
+  - Linux  
 - ScriptKitty types 10 times faster than a person - make sure to add *delays* in your scripts to let things launch!
 
 ## Creating the Payload

@@ -1,0 +1,355 @@
+:root {
+  color-scheme: dark;
+  --dk-accent: var(--color-darkmode-primary);
+  --dk-accent-soft: color-mix(in srgb, var(--color-darkmode-primary) 14%, transparent);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--dk-accent) 40%, transparent);
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+.nav-link.active {
+  color: var(--dk-accent);
+}
+
+.btn-outline-primary {
+  border-color: var(--dk-accent);
+  color: var(--dk-accent);
+}
+
+.btn-outline-primary:hover {
+  background: var(--dk-accent);
+  color: var(--color-text-dark);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.hero-glow::before {
+  content: "";
+  position: absolute;
+  inset: -20% 10% auto;
+  height: 520px;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--dk-accent) 22%, transparent), transparent);
+  pointer-events: none;
+}
+
+.feature-card {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.feature-card:hover {
+  border-color: color-mix(in srgb, var(--dk-accent) 55%, transparent);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  background: var(--dk-accent-soft);
+  color: var(--dk-accent);
+}
+
+.learn-card,
+.docs-card,
+.docs-pager {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.learn-card:hover,
+.docs-card:hover,
+.docs-pager:hover {
+  border-color: color-mix(in srgb, var(--dk-accent) 55%, transparent);
+}
+
+.learn-card:hover {
+  transform: translateY(-3px);
+}
+
+.docs-sidebar {
+  position: sticky;
+  top: 5.5rem;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+  padding-right: 1rem;
+  scrollbar-width: thin;
+}
+
+.docs-nav-group > summary {
+  list-style: none;
+}
+
+.docs-nav-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.docs-nav-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-darkmode-text-dark);
+}
+
+.docs-nav-heading:hover {
+  color: var(--dk-accent);
+}
+
+.docs-nav-chevron {
+  font-size: 0.65rem;
+  transition: transform 0.15s ease;
+  color: var(--color-darkmode-text-light);
+}
+
+.docs-nav-group[open] > summary .docs-nav-chevron {
+  transform: rotate(90deg);
+}
+
+.docs-nav-list {
+  margin: 0.15rem 0 0.75rem 0.3rem;
+  border-left: 1px solid var(--color-darkmode-border);
+}
+
+.docs-nav-subheading {
+  display: block;
+  padding: 0.2rem 0 0.2rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-darkmode-text-dark);
+}
+
+.docs-nav-link {
+  display: block;
+  margin-left: -1px;
+  padding: 0.3rem 0 0.3rem 0.9rem;
+  border-left: 2px solid transparent;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--color-darkmode-text);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.docs-nav-link:hover {
+  color: var(--color-darkmode-text-dark);
+  border-left-color: var(--color-darkmode-text-light);
+}
+
+.docs-nav-link.active {
+  color: var(--dk-accent);
+  border-left-color: var(--dk-accent);
+  font-weight: 600;
+}
+
+.docs-mobile-nav > summary,
+.docs-mobile-toc > summary {
+  list-style: none;
+}
+
+.docs-mobile-nav > summary::-webkit-details-marker,
+.docs-mobile-toc > summary::-webkit-details-marker {
+  display: none;
+}
+
+.docs-mobile-nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1px solid var(--color-darkmode-border);
+  border-radius: 0.5rem;
+  background: var(--color-darkmode-light);
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  color: var(--color-darkmode-text-dark);
+}
+
+.docs-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-toc ul ul {
+  padding-left: 0.9rem;
+}
+
+.docs-toc a {
+  display: block;
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--color-darkmode-text-light);
+}
+
+.docs-toc a:hover {
+  color: var(--dk-accent);
+}
+
+.content a:not(.btn) {
+  color: var(--dk-accent);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--dk-accent) 40%, transparent);
+  text-underline-offset: 3px;
+}
+
+.content a:not(.btn):hover {
+  text-decoration-color: var(--dk-accent);
+}
+
+.content img {
+  border-radius: 0.6rem;
+}
+
+.content :not(pre) > code {
+  border-radius: 0.3rem;
+  background: var(--color-darkmode-light);
+  padding: 0.15em 0.4em;
+  font-weight: 500;
+  color: var(--color-darkmode-text-dark);
+}
+
+.content :not(pre) > code::before,
+.content :not(pre) > code::after {
+  content: none;
+}
+
+.content pre {
+  border: 1px solid var(--color-darkmode-border);
+}
+
+.content blockquote {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem 1.25rem;
+  border-width: 1px 1px 1px 4px;
+  border-color: var(--color-darkmode-border);
+  border-left-color: var(--dk-accent);
+  color: var(--color-darkmode-text);
+}
+
+.content blockquote p::before,
+.content blockquote p::after {
+  content: none;
+}
+
+.docs-content h2 {
+  padding-top: 0.5rem;
+}
+
+.callout {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  border: 1px solid;
+  border-left-width: 4px;
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.1rem;
+  line-height: 1.6;
+}
+
+.callout-icon {
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+
+.callout-body > :last-child {
+  margin-bottom: 0;
+}
+
+.callout-body a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.callout-info {
+  border-color: #3b5b8a;
+  border-left-color: #6ea8fe;
+  background: rgba(110, 168, 254, 0.08);
+  color: #dbe7fb;
+}
+
+.callout-warning {
+  border-color: #7a6227;
+  border-left-color: #f5c451;
+  background: rgba(245, 196, 81, 0.08);
+  color: #f6ead0;
+}
+
+.callout-danger {
+  border-color: #7d3540;
+  border-left-color: #f17482;
+  background: rgba(241, 116, 130, 0.08);
+  color: #f8dadd;
+}
+
+.callout-success {
+  border-color: #2f6b4b;
+  border-left-color: #63d297;
+  background: rgba(99, 210, 151, 0.08);
+  color: #d6f3e3;
+}
+
+.callout a {
+  color: inherit;
+}
+
+.dk-details {
+  margin: 1.25rem 0;
+  border: 1px solid var(--color-darkmode-border);
+  border-radius: 0.5rem;
+  background: var(--color-darkmode-light);
+}
+
+.dk-details > summary {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--color-darkmode-text-dark);
+}
+
+.dk-details-body {
+  padding: 0 1rem 0.75rem;
+}
+
+.docs-toc #TableOfContents {
+  padding: 0;
+  background: transparent;
+}
+
+.docs-toc #TableOfContents li,
+.docs-toc #TableOfContents a {
+  color: var(--color-darkmode-text-light) !important;
+}
+
+.docs-toc #TableOfContents a:hover {
+  color: var(--dk-accent) !important;
+  text-decoration: none;
+}
+
+.table-of-content summary {
+  border-radius: 0.5rem;
+  background: var(--color-darkmode-light);
+  border: 1px solid var(--color-darkmode-border);
+  color: var(--color-darkmode-text-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+}
+
+.dark .table-of-content #TableOfContents {
+  background: transparent;
+  padding: 0.75rem 1rem;
+}
+
+.dark .table-of-content #TableOfContents li,
+.dark .table-of-content #TableOfContents a {
+  color: var(--color-darkmode-text) !important;
+}

@@ -1,0 +1,61 @@
+{{ define "main" }}
+  <section class="hero-glow relative overflow-hidden">
+    <div class="container relative pb-14 pt-20 text-center lg:pb-16 lg:pt-28">
+      {{ with .Params.hero.image }}
+        <img
+          src="{{ . | relURL }}"
+          alt="{{ site.Title }}"
+          class="mx-auto w-64 md:w-80 lg:w-[400px]"
+          width="400"
+          height="270" />
+      {{ end }}
+      {{ with .Params.lead }}
+        <p class="font-secondary text-darkmode-text-dark mt-8 text-xl font-semibold md:text-2xl">
+          {{ . | markdownify }}
+        </p>
+      {{ end }}
+      {{ with .Params.hero.buttons }}
+        <div class="mt-9 flex flex-wrap justify-center gap-3">
+          {{ range . }}
+            <a
+              class="btn {{ if eq .style `primary` }}btn-primary{{ else }}btn-outline-primary{{ end }} px-7 py-3 text-lg"
+              href="{{ .link | relLangURL }}"
+              {{ if findRE `^http` .link }}target="_blank" rel="noopener"{{ end }}
+              >{{ .label }}</a
+            >
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ with .Params.features }}
+    <section class="pb-16">
+      <div class="container">
+        <div class="row justify-center gy-4">
+          {{ range . }}
+            <div class="md:col-6 lg:col-4 mb-6">
+              <div class="feature-card h-full rounded-xl border border-darkmode-border bg-darkmode-light p-8 text-center">
+                {{ with .icon }}
+                  <span class="feature-icon mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full text-2xl">
+                    <i class="{{ . }}"></i>
+                  </span>
+                {{ end }}
+                <h2 class="h4 mb-3">{{ .title }}</h2>
+                <p>{{ .content | markdownify }}</p>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ with .Content }}
+    <section class="section-sm pt-0">
+      <div class="container">
+        <div class="content mx-auto max-w-3xl text-center">{{ . }}</div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,30 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section-sm">
+    <div class="container">
+      {{ with .Content }}
+        <div class="content mx-auto mb-12 max-w-3xl text-center">{{ . }}</div>
+      {{ end }}
+      <div class="row">
+        {{ range .Pages.ByWeight }}
+          <div class="md:col-6 lg:col-4 mb-8">
+            <a class="learn-card group flex h-full flex-col overflow-hidden rounded-xl border border-darkmode-border bg-darkmode-light" href="{{ .RelPermalink }}">
+              {{ partial "components/cover-image.html" (dict "Page" . "Class" "aspect-[16/9] w-full object-cover") }}
+              <div class="flex grow flex-col p-6">
+                <h2 class="h4 mb-3 transition group-hover:text-darkmode-primary">{{ .Title }}</h2>
+                {{ with .Description }}
+                  <p class="mb-5">{{ . }}</p>
+                {{ end }}
+                <span class="mt-auto font-semibold text-darkmode-primary">
+                  {{ T "read_more" | default "Read More" }}
+                  <i class="fa-solid fa-arrow-right ml-1 text-sm transition group-hover:translate-x-1"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,8 @@
+{{ $page := .Page }}
+{{ $src := $page.Params.image }}
+{{ if and (not $src) $page.Params.images }}
+  {{ $src = index $page.Params.images 0 }}
+{{ end }}
+{{ with $src }}
+  {{ partial "image" (dict "Src" . "Context" $page "Alt" $page.Title "Class" $.Class "DisplayXL" "800x" "DisplayLG" "800x" "DisplayMD" "600x") }}
+{{ end }}

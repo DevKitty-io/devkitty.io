@@ -1,0 +1,103 @@
+baseURL = "https://devkitty.io/"
+title = "DevKitty"
+theme = "hugoplate"
+timeZone = "America/Los_Angeles"
+summaryLength = 30
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableEmoji = true
+enableRobotsTXT = true
+capitalizeListTitles = false
+
+[permalinks.page]
+blog = "/blog/:title/"
+
+[pagination]
+disableAliases = false
+pagerSize = 10
+path = "page"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[build]
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/notwatching/hugo_stats\.json'
+target = 'css'
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+disableWatch = true
+source = "hugo_stats.json"
+target = "assets/notwatching/hugo_stats.json"
+
+[outputs]
+home = ["HTML", "RSS", "SearchIndex"]
+page = ["HTML"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML"]
+term = ["HTML"]
+
+[imaging]
+resampleFilter = "Lanczos"
+[imaging.jpeg]
+quality = 80
+[imaging.webp]
+quality = 80
+
+[caches]
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+[caches.assets]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[markup]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.goldmark.parser.attribute]
+block = true
+[markup.highlight]
+style = "dracula"
+lineNumbersInTable = false
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+ordered = false
+
+[outputFormats]
+[outputFormats.SearchIndex]
+mediaType = "application/json"
+baseName = "searchindex"
+isPlainText = true
+notAlternative = true
+
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/brands.css"
+lazy = true
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/solid.css"
+lazy = true
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/icons.css"
+lazy = true
+
+[[params.plugins.js]]
+link = "js/search.js"
+lazy = false
+[[params.plugins.js]]
+link = "js/accordion.js"
+lazy = true
+[[params.plugins.js]]
+link = "js/tab.js"
+lazy = true
+[[params.plugins.js]]
+link = "plugins/youtube-lite.js"
+lazy = true

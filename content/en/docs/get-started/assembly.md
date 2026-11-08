@@ -6,10 +6,6 @@ date: 2023-05-11T00:52:00-07:00
 lastmod: 2023-05-11T00:52:00-07:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: ""
-    identifier: "assembly-5560147284bbc5e978bad89bf75506a4"
 weight: 10
 toc: true
 ---
@@ -194,16 +190,16 @@ For more tips, check out our soldering guide. -->
 
 - Plug in your CutieCat with USB Type C
 - With your board fully assembled, it should power on the QA Firmware!
-- Check out our [Firmware Guide]() to load new firmware.
+- Check out our Firmware Guide to load new firmware.
 
 {{< alert icon="🛈" context="danger" text="If your board doesn't work, check our troubleshooting guide." />}}
 
 ## 🔧 Additional Mods
 ![](/images/update.JPG)
 
-Check out our [mods]() section for more, including adding the long-range antenna!
+Check out our mods section for more, including adding the long-range antenna!
 
 <!-- #update# -->
-- 🔋 [Battery Mod]()
-- 📡 [Long-Range Antenna]()
-- 🛰 [GPS Mod]()
+- 🔋 Battery Mod
+- 📡 Long-Range Antenna
+- 🛰 GPS Mod

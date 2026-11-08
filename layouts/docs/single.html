@@ -1,53 +1,62 @@
 {{ define "main" }}
-	<div class="row flex-xl-nowrap">
-		<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne .Site.Params.options.navbarSticky true }} docs-sidebar-top{{ end }} d-none d-lg-block">
-			<nav {{ if eq .Site.Params.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
-				{{ partial "sidebar/docs-menu.html" . }}
-			</nav>
-		</div>
-		{{ if ne .Params.toc false -}}
-		<nav class="docs-toc{{ if ne .Site.Params.options.navbarSticky true }} docs-toc-top{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
-			{{ partial "sidebar/docs-toc.html" . }}
-		</nav>
-		{{ end -}}
-		{{ if .Params.toc -}}
-		<main class="docs-content col-lg-11 col-xl{{ if eq .Site.Params.options.fullWidth false }}-9{{ end }}">
-		{{ else -}}
-		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
-		{{ end -}}
-			{{ if .Site.Params.options.breadCrumb -}}
-				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						{{ partial "main/breadcrumb" . -}}
-						<li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
-					</ol>
-				</nav>
-			{{ end }}
-			<h1>{{ .Title }}</h1>
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
-			{{ if ne .Params.toc false -}}
-			<nav class="d-xl-none" aria-label="Quaternary navigation">
-				{{ partial "sidebar/docs-toc.html" . }}
-			</nav>
-			{{ end -}}
-			{{ .Content }}
-			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
-				{{ if .Site.Params.lastMod -}}
-					{{ partial "main/last-modified.html" . }}
-				{{ end -}}
-				{{ if .Site.Params.editPage -}}
-					{{ partial "main/edit-page.html" . }}
-				{{ end -}}
-			</div>
-			{{ partial "main/docs-navigation.html" . }}
-			<!--
-			{{ if not .Site.Params.options.collapsibleSidebar -}}
-				{{ partial "main/docs-navigation.html" . }}
-			{{ else -}}
-				<div class="my-n3"></div>
-			{{ end -}}
-			-->
-		</main>
-	</div>
+  {{ $hasToc := and (ne .Params.toc false) (gt (len (findRE "<li>" .TableOfContents)) 1) }}
+  <section class="pb-16 pt-8 lg:pt-12">
+    <div class="container">
+      <div class="row">
+        <aside class="lg:col-3">
+          <details class="docs-mobile-nav mb-8 lg:hidden">
+            <summary class="docs-mobile-nav-toggle">
+              <span><i class="fa-solid fa-bars mr-2"></i>{{ .CurrentSection.Title }}</span>
+              <i class="fa-solid fa-chevron-down text-sm"></i>
+            </summary>
+            <div class="mt-3 rounded-lg border border-darkmode-border bg-darkmode-light p-4">
+              {{ partial "docs/sidebar.html" . }}
+            </div>
+          </details>
+          <div class="docs-sidebar hidden lg:block">
+            {{ partial "docs/sidebar.html" . }}
+          </div>
+        </aside>
+
+        <article class="{{ if $hasToc }}lg:col-9 xl:col-7{{ else }}lg:col-9{{ end }}">
+          <header class="mb-8 border-b border-darkmode-border pb-6">
+            <p class="text-darkmode-primary mb-2 text-sm font-semibold uppercase tracking-wider">{{ .CurrentSection.Title }}</p>
+            <h1 class="h2">{{ .Title }}</h1>
+            {{ with .Params.lead }}
+              <p class="mt-3 text-lg text-darkmode-text-light">{{ . | safeHTML }}</p>
+            {{ end }}
+          </header>
+
+          {{ if $hasToc }}
+            <details class="docs-mobile-toc mb-8 xl:hidden">
+              <summary class="docs-mobile-nav-toggle">
+                <span><i class="fa-solid fa-list mr-2"></i>{{ T "toc" | default "On this page" }}</span>
+                <i class="fa-solid fa-chevron-down text-sm"></i>
+              </summary>
+              <div class="docs-toc mt-3 rounded-lg border border-darkmode-border bg-darkmode-light p-4">
+                {{ .TableOfContents }}
+              </div>
+            </details>
+          {{ end }}
+
+          <div class="content docs-content">
+            {{ .Content }}
+          </div>
+
+          {{ partial "docs/prev-next.html" . }}
+        </article>
+
+        {{ if $hasToc }}
+          <aside class="hidden xl:col-2 xl:block">
+            <div class="docs-toc sticky top-24">
+              <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-darkmode-text-dark">
+                {{ T "toc" | default "On this page" }}
+              </p>
+              {{ .TableOfContents }}
+            </div>
+          </aside>
+        {{ end }}
+      </div>
+    </div>
+  </section>
 {{ end }}

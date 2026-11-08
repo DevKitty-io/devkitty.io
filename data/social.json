@@ -1,0 +1,19 @@
+{
+  "main": [
+    {
+      "name": "GitHub",
+      "icon": "fab fa-github",
+      "link": "https://github.com/DevKitty-io"
+    },
+    {
+      "name": "Twitter",
+      "icon": "fab fa-twitter",
+      "link": "https://twitter.com/devkitty_io"
+    },
+    {
+      "name": "Discord",
+      "icon": "fab fa-discord",
+      "link": "https://discord.devkitty.io"
+    }
+  ]
+}

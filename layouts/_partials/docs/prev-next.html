@@ -1,0 +1,42 @@
+{{ $pages := slice }}
+{{ with site.GetPage "/docs" }}
+  {{ range .Sections.ByWeight }}
+    {{ range .Pages.ByWeight }}
+      {{ if .IsSection }}
+        {{ range .Pages.ByWeight }}{{ $pages = $pages | append . }}{{ end }}
+      {{ else }}
+        {{ $pages = $pages | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $prev := false }}
+{{ $next := false }}
+{{ range $i, $p := $pages }}
+  {{ if eq $p $ }}
+    {{ if gt $i 0 }}{{ $prev = index $pages (sub $i 1) }}{{ end }}
+    {{ if lt (add $i 1) (len $pages) }}{{ $next = index $pages (add $i 1) }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if or $prev $next }}
+  <nav class="mt-14 grid gap-4 border-t border-darkmode-border pt-8 sm:grid-cols-2" aria-label="Docs pagination">
+    <div>
+      {{ with $prev }}
+        <a class="docs-pager block h-full rounded-lg border border-darkmode-border p-4" href="{{ .RelPermalink }}">
+          <span class="text-sm text-darkmode-text-light"><i class="fa-solid fa-arrow-left mr-1"></i> {{ .CurrentSection.Title }}</span>
+          <span class="mt-1 block font-semibold text-darkmode-text-dark">{{ .LinkTitle }}</span>
+        </a>
+      {{ end }}
+    </div>
+    <div>
+      {{ with $next }}
+        <a class="docs-pager block h-full rounded-lg border border-darkmode-border p-4 text-right" href="{{ .RelPermalink }}">
+          <span class="text-sm text-darkmode-text-light">{{ .CurrentSection.Title }} <i class="fa-solid fa-arrow-right ml-1"></i></span>
+          <span class="mt-1 block font-semibold text-darkmode-text-dark">{{ .LinkTitle }}</span>
+        </a>
+      {{ end }}
+    </div>
+  </nav>
+{{ end }}

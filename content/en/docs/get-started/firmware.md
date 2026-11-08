@@ -6,10 +6,6 @@ date: 2023-05-11T00:52:00-07:00
 lastmod: 2023-05-11T00:52:00-07:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: ""
-    identifier: "dev-kit-assembly-5560147284bbc5e978bad89bf75506a4"
 weight: 10
 toc: true
 ---
@@ -20,16 +16,16 @@ toc: true
 <!-- #update# -->
 <!-- add more pictures -->
 
-CutieCat comes flashed with [QA Firmware](https://github.com/DevKitty-io/QA-Firmware) to test basic functionality.  To start hacking you'll have to load new firmware.  If you're adventurous you can even learn to write your own!
+CutieCat comes flashed with QA Firmware to test basic functionality.  To start hacking you'll have to load new firmware.  If you're adventurous you can even learn to write your own!
 
 ## 💻 Firmware Guide
 {{< alert icon="ℹ️" context="warning" text="Pick a firmware, and keep reading to learn how to flash these projects." />}}
 
 ##### Official Firmware  
-We're constantly adding new features and developing cool hacking tools for the ESP32.  Here's a couple projects we've built from [your suggestions]():
-- [ScriptKitty](): Attack computers over a USB connection with Keystroke Injection
-- [DevKitty Wardriver](): Scan & Map WiFi Devices (WiGLE compatible)
-- [DevKitty Sniffer](): Gather WiFi & Bluetooth Recon (Kismet compatible)
+We're constantly adding new features and developing cool hacking tools for the ESP32.  Here's a couple projects we've built from your suggestions:
+- ScriptKitty: Attack computers over a USB connection with Keystroke Injection
+- DevKitty Wardriver: Scan & Map WiFi Devices (WiGLE compatible)
+- DevKitty Sniffer: Gather WiFi & Bluetooth Recon (Kismet compatible)
 
 <!-- #update# -->
 <!-- post sniffer source code -->
@@ -37,15 +33,15 @@ We're constantly adding new features and developing cool hacking tools for the E
 ![](/images/update.JPG)
 
 ##### CircuitPython
-Our ESP32-based designs are supported by [CircuitPython](), a lightweight version of Python that lets you develop on the go!
+Our ESP32-based designs are supported by CircuitPython, a lightweight version of Python that lets you develop on the go!
 
-With CircuitPython, you can build hardware prototypes in minutes.  We're working on adding some example projects, but you can check out some [great guides by Adafruit]() in the mean time.  Our boards feature a Qwiic / Stemma QT compatible connector that lets you easily interface with their sensors!
+With CircuitPython, you can build hardware prototypes in minutes.  We're working on adding some example projects, but you can check out some great guides by Adafruit in the mean time.  Our boards feature a Qwiic / Stemma QT compatible connector that lets you easily interface with their sensors!
 
-[Download the binary here]().
+Download the binary here.
 
 <!-- ##### Community Projects
-- [DevKitty Wardriver]()
-- [ScriptKitty]()
+- DevKitty Wardriver
+- ScriptKitty
 
 ##### Arduino -->
 

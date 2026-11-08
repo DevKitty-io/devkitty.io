@@ -1,0 +1,6 @@
+<div class="not-prose my-6 overflow-hidden rounded-lg">
+  <video class="w-full"{{ with .Get "attributes" }} {{ . | safeHTMLAttr }}{{ end }}>
+    {{ with .Get "webm-src" }}<source src="{{ . | relURL }}" type="video/webm" />{{ end }}
+    {{ with .Get "mp4-src" }}<source src="{{ . | relURL }}" type="video/mp4" />{{ end }}
+  </video>
+</div>

@@ -1,0 +1,45 @@
+{{ $pf:= hugo.Data.theme.fonts.font_family.primary }}
+{{ $sf:= hugo.Data.theme.fonts.font_family.secondary }}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family={{ $pf | safeURL }}{{ with $sf }}{{ if ne . $pf }}&family={{ . | safeURL }}{{ end }}{{ end }}&display=swap" />
+
+{{ $stylesLazy := slice }}
+{{ range site.Params.plugins.css }}
+  {{ if findRE "^http" .link }}
+    <link
+      crossorigin="anonymous"
+      media="all"
+      rel="stylesheet"
+      href="{{ .link | relURL }}"
+      {{ .attributes | safeHTMLAttr }} />
+  {{ else }}
+    {{ $stylesLazy = $stylesLazy | append (resources.Get .link) }}
+  {{ end }}
+{{ end }}
+
+{{ with (templates.Defer (dict "key" "global")) }}
+  {{ $tailwindCSS := resources.Get "css/main.css" | css.TailwindCSS (dict "inlineImports" true) }}
+  {{ if hugo.IsProduction }}
+    {{ $tailwindCSS = $tailwindCSS | minify | fingerprint }}
+  {{ end }}
+  <link
+    href="{{ $tailwindCSS.RelPermalink }}"
+    {{ with $tailwindCSS.Data.Integrity }}integrity="{{ . }}"{{ end }}
+    rel="stylesheet" />
+{{ end }}
+
+{{ with $stylesLazy }}
+  {{ $lazy := . | resources.Concat "css/style-lazy.css" }}
+  {{ if hugo.IsProduction }}
+    {{ $lazy = $lazy | minify | fingerprint }}
+  {{ end }}
+  <link
+    rel="stylesheet"
+    href="{{ $lazy.RelPermalink }}"
+    {{ with $lazy.Data.Integrity }}integrity="{{ . }}"{{ end }}
+    media="print"
+    onload="this.media='all'; this.onload=null;" />
+{{ end }}

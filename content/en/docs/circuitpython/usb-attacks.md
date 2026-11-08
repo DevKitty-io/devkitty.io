@@ -6,10 +6,6 @@ date: 2023-11-25T18:23:55-08:00
 lastmod: 2023-11-25T18:23:55-08:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: ""
-    identifier: "usb-attacks-7be66a33d7f1922d969a9ac95c7e74e7"
 weight: 20
 toc: true
 ---
@@ -23,7 +19,7 @@ toc: true
 
 ## Keystroke Injection
 **Keystroke Injection** is the most prominent type of USB attack, pioneered by [Hak5](https://hak5.org).
-Specifically, its classified as an **`HID Attack`** - or [Human Interface Device]() attack.
+Specifically, its classified as an **`HID Attack`** - or Human Interface Device attack.
 
 HID devices like keyboards are inherently trusted by computers - imagine how dumb it would be if you had to install drivers to set up a keyboard or mouse on your computer!  
 

@@ -1,0 +1,46 @@
+{{ define "main" }}
+  {{ $hasToc := and (ne .Params.toc false) (gt (len (findRE "<li>" .TableOfContents)) 1) }}
+  <section class="pb-16 pt-10 lg:pt-14">
+    <div class="container">
+      <div class="row justify-center">
+        <article class="{{ if $hasToc }}lg:col-8{{ else }}lg:col-9{{ end }}">
+          <a class="mb-6 inline-block text-sm font-semibold text-darkmode-primary" href="{{ .CurrentSection.RelPermalink }}">
+            <i class="fa-solid fa-arrow-left mr-1"></i> {{ .CurrentSection.Title }}
+          </a>
+          <h1 class="h2 mb-3">{{ .Title }}</h1>
+          {{ with .Params.lead }}
+            <p class="mb-8 text-lg text-darkmode-text-light">{{ . | safeHTML }}</p>
+          {{ end }}
+          {{ partial "components/cover-image.html" (dict "Page" . "Class" "mb-10 w-full rounded-xl") }}
+
+          {{ if $hasToc }}
+            <details class="docs-mobile-toc mb-8 lg:hidden">
+              <summary class="docs-mobile-nav-toggle">
+                <span><i class="fa-solid fa-list mr-2"></i>{{ T "toc" | default "On this page" }}</span>
+                <i class="fa-solid fa-chevron-down text-sm"></i>
+              </summary>
+              <div class="docs-toc mt-3 rounded-lg border border-darkmode-border bg-darkmode-light p-4">
+                {{ .TableOfContents }}
+              </div>
+            </details>
+          {{ end }}
+
+          <div class="content docs-content">
+            {{ .Content }}
+          </div>
+        </article>
+
+        {{ if $hasToc }}
+          <aside class="hidden lg:col-3 lg:block">
+            <div class="docs-toc sticky top-24">
+              <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-darkmode-text-dark">
+                {{ T "toc" | default "On this page" }}
+              </p>
+              {{ .TableOfContents }}
+            </div>
+          </aside>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

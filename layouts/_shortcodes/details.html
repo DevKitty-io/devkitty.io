@@ -1,0 +1,6 @@
+<details class="dk-details"{{ with .Get 1 }} {{ . | safeHTMLAttr }}{{ end }}>
+  <summary>{{ with .Get 0 }}{{ . | markdownify }}{{ else }}{{ errorf "details shortcode: no summary in %s" $.Position }}{{ end }}</summary>
+  <div class="dk-details-body">
+    {{ with .Inner }}{{ . | markdownify }}{{ else }}{{ errorf "details shortcode: no content in %s" $.Position }}{{ end }}
+  </div>
+</details>

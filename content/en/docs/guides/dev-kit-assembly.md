@@ -6,10 +6,6 @@ date: 2023-05-11T00:52:00-07:00
 lastmod: 2023-05-11T00:52:00-07:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: ""
-    identifier: "dev-kit-assembly-5560147284bbc5e978bad89bf75506a4"
 weight: 10
 toc: true
 ---
@@ -28,7 +24,7 @@ Buy the [DevKitty soldering kit on our webstore](https://shop.devkitty.io)!
 | *Female Header (Short) | S2 Mini Breakout Headers |2|
 | *Female Header (Long) | Expansion Header |1|
 
-[Learn more about these parts →]()
+Learn more about these parts →
 
 Your DevKitty PCB comes with surface mount `Buttons`, `NeoPixel`, and `Qwiic Connector` pre-soldered since these are a little tricky!
 
@@ -80,7 +76,7 @@ Plug your DevKitty into a USB-C power source.  It should run a simple function t
 Now we're ready to update our firmware!
 
 ![meep](images/5-Case.png)
-<!-- Check out our [troubleshooting guide]() if this doesn't work. -->
+<!-- Check out our troubleshooting guide if this doesn't work. -->
 ## Links
-- [3D Printed Cases]()
-- [Component Selection]()
+- 3D Printed Cases
+- Component Selection

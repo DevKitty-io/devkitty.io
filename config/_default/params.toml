@@ -1,104 +1,50 @@
-# Meta Data for SEO
+favicon = "images/favicon.png"
+logo = "images/logo.png"
+logo_darkmode = "images/logo.png"
+logo_width = "36px"
+logo_height = "40px"
+logo_webp = true
+logo_text = "DevKitty"
+navbar_fixed = true
+theme_switcher = false
+theme_default = "dark"
+mainSections = ["blog"]
+contact_form_action = ""
+google_tag_manager = ""
+google_adsense = ""
+custom_script = ""
+copyright = "© DevKitty"
 
-## Homepage
-title = "DevKitty"
-titleSeparator = "-"
-titleAddition = "Cat-Themed Tools for Hackers & Makers!"
-description = "Cat-Themed Tools for Hackers & Makers!"
+[navigation_button]
+enable = true
+label = "Shop"
+link = "https://shop.devkitty.io"
 
-## Documentation
-# docsVersion = "0.1"
+[search]
+enable = true
+primary_color = "#B39DDB"
+include_sections = ["docs", "learn", "blog"]
+show_image = false
+show_description = true
+show_tags = false
+show_categories = false
 
-## Twitter Cards
-twitterSite = "@getdoks"
-twitterCreator = "@henkverlinde"
+[metadata]
+keywords = ["DevKitty", "CutieCat", "hardware hacking", "wardriving", "USB attacks", "TCSM"]
+description = "Cat-Themed Tools for Hackers & Makers"
+author = "DevKitty"
+twitter = "devkitty_io"
+image = "images/og-image.png"
 
-## JSON-LD
-schemaType = "Organization"
-schemaName = "DevKitty"
-schemaAuthorTwitter = "https://twitter.com/devkitty_io"
-schemaAuthorGitHub = "https://github.com/DevKitty-io"
-schemaLocale = "en-US"
-schemaLogo = "logo.png"
-schemaLogoWidth = 512
-schemaLogoHeight = 512
-schemaImage = "doks.png"
-schemaImageWidth = 1280
-schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/devkitty_io"
-schemaGitHub = "https://github.com/DevKitty-io"
-schemaSection = "blog"
+[site_verification]
+google = ""
+bing = ""
+baidu = ""
+facebook = ""
+mastodon = ""
 
-## Sitelinks Search Box
-siteLinksSearchBox = false
+[mermaid]
+js_url = "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs"
 
-## Chrome Browser
-themeColor = "#fff"
-
-# Images
-quality = 85
-bgColor = "#fff"
-landscapePhotoWidths = [900, 800, 700, 600, 500]
-portraitPhotoWidths = [800, 700, 600, 500]
-lqipWidth = "20x"
-smallLimit = "300"
-
-# Images
-imageResponsive = true
-imageConvertTo = "webp"
-imageImageSizes = ["480","720","1080","1280","1600","2048"]
-singleSize = false
-imageAddClass = "img-fluid lazyload blur-up"
-
-### Image template
-defaultImage = "default-image.png" # put in `./assets/images/`
-fillImage = "1270x740 Center" # normalize image size
-
-# Footer
-footer = "© 2024 DevKitty"
-
-# Feed
-copyRight = "Copyright (c) 2024 DevKitty"
-
-# Alert
-alert = false
-alertDismissable = true
-# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
-
-# Edit Page
-# repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
-repoHost = "GitHub"
-#repoHost = "Gitea"
-docsRepo = "https://github.com/h-enk/doks"
-docsRepoBranch = "master"
-docsRepoSubPath = ""
-editPage = false
-lastMod = false
-
-[sections]
-  sectionNav = ["docs", "guides"]
-
-[options]
-  lazySizes = true
-  clipBoard = true
-  instantPage = true
-  flexSearch = true
-  searchSectionsShow = []
-  searchSectionsIndex = []
-  darkMode = true
-  bootStrapJs = true
-  breadCrumb = false
-  highLight = true
-  kaTex = false
-  multilingualMode = false
-  docsVersioning = false
-  fullWidth = false
-  navbarSticky = true
-  toTopButton = false
-  scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
-
-[menu]
-  [menu.section]
-    auto = true
-    collapsibleSidebar = true
+[widgets]
+sidebar = ["tags"]

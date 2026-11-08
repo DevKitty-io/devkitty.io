@@ -1,0 +1,23 @@
+<!doctype html>
+<html
+  itemscope
+  class="dark"
+  lang="{{ site.Language.Locale | default `en-US` }}"
+  itemtype="http://schema.org/WebPage">
+  <head>
+    {{ partial "essentials/head.html" . }}
+    {{ partial "essentials/style.html" . }}
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    {{ partial "essentials/header.html" . }}
+    {{ partial "search-modal.html" (dict "Context" . ) }}
+
+    <main class="grow">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "essentials/footer.html" . }}
+    {{ partialCached "essentials/script.html" . }}
+  </body>
+</html>

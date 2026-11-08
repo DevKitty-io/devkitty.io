@@ -6,16 +6,13 @@ date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: "guides"
 weight: 110
 toc: true
 ---
 {{< alert icon="ℹ️" context="info" text="Unless you hate Chrome, we recommend checking out our browser flashing guide for an easier experience." />}}
 
 ### Step 1: Downloads
-* Download the latest [Firmware](https://github.com/DevKitty/USB-DevKitty/releases/download/v1.2.1-beta/USB-DevKitty.bin)
+* Download the latest Firmware
 * Download [ESPTool](https://github.com/espressif/esptool)
 
 

@@ -1,71 +1,32 @@
 {
-  "name": "@hyas/doks",
-  "description": "Doks theme",
-  "version": "0.5.0",
-  "engines": {
-    "node": ">=16.16.0"
-  },
-  "browserslist": [
-    "defaults"
-  ],
-  "repository": "https://github.com/h-enk/doks",
+  "name": "devkitty.io",
+  "description": "DevKitty website & docs",
+  "version": "1.0.0",
+  "private": true,
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "init": "shx rm -rf .git && git init -b main",
-    "create": "exec-bin node_modules/.bin/hugo/hugo new",
-    "prestart": "npm run clean",
-    "start": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender",
-    "prebuild": "npm run clean",
-    "build": "exec-bin node_modules/.bin/hugo/hugo --gc --minify",
-    "build:preview": "npm run build -D -F",
-    "clean": "shx rm -rf public resources",
-    "clean:install": "shx rm -rf package-lock.json node_modules ",
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
-    "lint:scripts": "eslint assets/js config functions",
-    "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
-    "lint:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
-    "lint:markdown-fix": "markdownlint-cli2-fix \"*.md\" \"content/**/*.md\"",
-    "server": "exec-bin node_modules/.bin/hugo/hugo server",
-    "test": "npm run -s lint",
-    "env": "env",
-    "precheck": "npm version",
-    "check": "exec-bin node_modules/.bin/hugo/hugo version",
-    "copy:katex-fonts": "shx cp ./node_modules/katex/dist/fonts/* ./static/fonts/",
-    "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "theme": "node scripts/themeGenerator.js",
+    "dev": "node scripts/themeGenerator.js && concurrently \"node scripts/themeGenerator.js --watch\" \"hugo server\"",
+    "start": "npm run dev",
+    "build": "node scripts/themeGenerator.js && hugo --gc --minify",
+    "preview": "node scripts/themeGenerator.js && hugo server --disableFastRender -e production --minify",
+    "update-modules": "hugo mod get -u ./... && hugo mod tidy",
+    "format": "prettier -w ."
   },
   "devDependencies": {
-    "@babel/cli": "^7.18",
-    "@babel/core": "^7.18",
-    "@babel/preset-env": "^7.18",
-    "@fullhuman/postcss-purgecss": "^4.1",
-    "@hyas/images": "^0.2.2",
-    "auto-changelog": "^2.4",
-    "autoprefixer": "^10.4",
-    "bootstrap": "^5.2.0-beta1",
-    "clipboard": "^2.0",
-    "eslint": "^8.19",
-    "exec-bin": "^1.0.0",
-    "flexsearch": "^0.7.21",
-    "highlight.js": "^11.5",
-    "hugo-installer": "^3.1",
-    "instant.page": "^5.1",
-    "katex": "^0.16",
-    "lazysizes": "^5.3",
-    "markdownlint-cli2": "^0.4.0",
-    "netlify-plugin-submit-sitemap": "^0.4.0",
-    "node-fetch": "^3.2",
-    "postcss": "^8.4",
-    "postcss-cli": "^10.0",
-    "purgecss-whitelister": "^2.4",
-    "shx": "^0.3.4",
-    "stylelint": "^14.9",
-    "stylelint-config-standard-scss": "^4.0"
+    "@tailwindcss/cli": "^4.3.0",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.19",
+    "concurrently": "^9.2.1",
+    "hugo-extended": "^0.169.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-go-template": "0.0.15",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "tailwind-bootstrap-grid": "^7.0.0",
+    "tailwindcss": "^4.3.0"
   },
-  "otherDependencies": {
-    "hugo": "0.101.0"
+  "overrides": {
+    "postcss-selector-parser": "^6.1.5",
+    "adm-zip": "^0.6.1"
   }
 }

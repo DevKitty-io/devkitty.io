@@ -6,9 +6,6 @@ date: 2020-11-12T13:26:54+01:00
 lastmod: 2020-11-12T13:26:54+01:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: "developers"
 weight: 10
 toc: true
 ---
@@ -17,7 +14,7 @@ toc: true
 
 
 
-These tiny but powerful MCU's support WiFi, Bluetooth, Native USB, and all the other fun hacking features we love, in a minimal footprint.  CutieCats ship with the [Xiao ESP32-S3]() but you can easily swap in your own microcontroller!
+These tiny but powerful MCU's support WiFi, Bluetooth, Native USB, and all the other fun hacking features we love, in a minimal footprint.  CutieCats ship with the Xiao ESP32-S3 but you can easily swap in your own microcontroller!
 
 <!--- --->
 
@@ -63,7 +60,7 @@ These tiny but powerful MCU's support WiFi, Bluetooth, Native USB, and all the o
 |---|---|---|
 |CutieCat PCB|Custom Circuit Board design|Comes with all SMD components pre-soldered for user ease.|
 |D-Pad|Mini Soft-Touch Button|[Soft, clicky buttons.](https://www.adafruit.com/product/3983)|
-|Screen|[SH1106 OLED Display]() |128x64px 1.3" OLED Display (I2C)|
+|Screen|SH1106 OLED Display |128x64px 1.3" OLED Display (I2C)|
 |Antennas|u.fl to RP-SMA|PCB-mounted external antenna(s)|
 |Micro-SD||Push-push connector for Micro-SD Cards.|
 
@@ -73,11 +70,11 @@ These tiny but powerful MCU's support WiFi, Bluetooth, Native USB, and all the o
 <!--- positioning specs --->
 
 ## Expansion & Mods
-CutieCat makes prototyping a breeze!  The `P1` breakout header on the side lets you easily breadboard your ideas.  CutieCat also has 2 JST connectors `P3` & `P3` that let you plug & play with a range of [Sparkfun Qwiic]() or [Adafruit Stemma QT]() Sensors!
+CutieCat makes prototyping a breeze!  The `P1` breakout header on the side lets you easily breadboard your ideas.  CutieCat also has 2 JST connectors `P3` & `P3` that let you plug & play with a range of Sparkfun Qwiic or Adafruit Stemma QT Sensors!
 
 CutieCat also features a small 3-pin JST connector `P4` for controlling LED light strips.
 
-Check out the [mods guide]() for more info on the modchip!
+Check out the mods guide for more info on the modchip!
 
 ## Changelog
 Check out the GitHub for a more extensive changelog.  

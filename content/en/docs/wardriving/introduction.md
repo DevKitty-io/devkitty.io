@@ -6,9 +6,6 @@ date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: "advanced-projects"
 weight: 10
 toc: true
 ---
@@ -16,7 +13,7 @@ toc: true
 
 
 ## What is Wardriving?
-[Wardriving]() is a reconaissance technique that involves driving around while scanning for wireless devices.  It's one of the quickest ways to gather intelligence on large amounts of WiFi networks and smart devices!  
+Wardriving is a reconaissance technique that involves driving around while scanning for wireless devices.  It's one of the quickest ways to gather intelligence on large amounts of WiFi networks and smart devices!  
 
 By combining wireless & GPS data, you can create maps that let you easily locate where vulnerable networks were spotted.
 
@@ -28,14 +25,14 @@ In 2018 Alex created the CreepDetector, a project that uses wardriving to detect
 
 ##### DNS DriveBy
 
-[Wigle.net]() is a testament to the power of crowdsourcing. Millions of contributions to this open-source database of networks
+Wigle.net is a testament to the power of crowdsourcing. Millions of contributions to this open-source database of networks
 
 ##### Notable Projects
 
 ## Getting Started
 If you want to try wardriving, all you need is a WiFi & GPS enabled device!  
 
-An Android phone with [Wigle]() will suffice for sniffing networks, but has limitations when it comes to picking up client devices & capturing WiFi recon.  This is where your CutieCat shines!  Keep reading to see what hardware you need.
+An Android phone with Wigle will suffice for sniffing networks, but has limitations when it comes to picking up client devices & capturing WiFi recon.  This is where your CutieCat shines!  Keep reading to see what hardware you need.
 
 <!-- ## Potential Use Cases
 There's a wide variety of use cases for Wardriving, but its most often used to collect vulnerable networks & devices, or for 

@@ -1,5 +1,3 @@
-# Deploy your Hyas site to GitHub Pages
-
 name: GitHub Pages
 
 on:
@@ -9,25 +7,29 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '24'
           cache: 'npm'
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
 
       - name: Install dependencies
         run: npm install
 
-      # - name: Check for linting errors
-      #   run: npm test
-
       - name: Build production website
-        run: npm run build
+        run: |
+          rm -rf public resources
+          npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public

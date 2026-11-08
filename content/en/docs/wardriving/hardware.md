@@ -6,9 +6,6 @@ date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: "advanced-projects"
 weight: 90
 toc: true
 ---
@@ -18,16 +15,16 @@ toc: true
 Wardriving combines wireless reconnaissance & location data - since DevKitty boards are already capable of sniffing WiFi & Bluetooth, this means all you need is a GPS module!
 
 - MicroSD Card
-- [GPS Module]()
-- [Battery Pack]() (optional)
+- GPS Module
+- Battery Pack (optional)
 
 ## Official Hardware
-For `v0` DevKitty boards, our UART expansion header makes it easy to plug-and-play GPS modules without any fuss!  [You can buy one here.]()
+For `v0` DevKitty boards, our UART expansion header makes it easy to plug-and-play GPS modules without any fuss!  You can buy one here.
 <!-- image here -->
 
 
 ## GPS Modules
-The Wardriver Firmware should work with any UART GPS module!  Our current [plug-and-play GPS]() uses the `ATGM336H` because of its small footprint.  We've tested the following:
+The Wardriver Firmware should work with any UART GPS module!  Our current plug-and-play GPS uses the `ATGM336H` because of its small footprint.  We've tested the following:
 - NEO-6M 
 - NEO-M8N
 - ATGM336H
